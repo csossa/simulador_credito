@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Crédito</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js"></script>
+
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>¡Crédito Aniversario!</h1>
+        
+        <!-- Paso 1: Límite de monto y tasa de interés -->
+        <label for="loanAmount">Monto del préstamo:</label>
+        <input type="number" id="loanAmount" placeholder="Ingrese el monto del préstamo">
+        
+        <!-- Paso 2: Control deslizante para el plazo del préstamo -->
+        <label for="loanTerm">Plazo del préstamo (en meses):</label>
+        <input type="range" id="loanTerm" min="1" max="24" value="1" oninput="updateLoanTerm()">
+        <div id="loanTermValue">1</div>
+
+        
+        <small>(15% N.A. - 1.25% mensual)</small>
+
+        <!-- Paso 4: Cuota mensual y subtítulo -->
+        <div id="monthlyPaymentContainer">
+            <h2>Cuota Mensual:</h2>
+            <p id="monthlyPaymentValue">$0.00</p>
+        </div>
+
+        <!-- Paso 7: Nota informativa -->
+        <div id="disclaimer">
+            <p>La cuota no incluye el valor del seguro.</p>
+        </div>
+       
+        <!-- Paso 9: Mostrar y ocultar tabla de amortización -->
+        <button onclick="toggleAmortizationTable()">Mostrar/Ocultar Tabla de Amortización</button>
+
+        <!-- Paso 1: Contenedor para la tabla de amortización -->
+        <div id="amortizationContainer">
+            <!-- La tabla de amortización se agregará aquí -->
+        </div>
+
+        <!-- Paso 8: Descargar tabla de amortización en PDF -->
+        <button onclick="downloadPDF()">Descargar Tabla de Amortización (PDF)</button>
+
+        <!-- Paso 7: Nota informativa -->
+        <div id="disclaimer">
+            <p>Los cálculos pueden variar según las condiciones del crédito y están sujetos a cambios.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
