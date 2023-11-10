@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://cooprofesoresun.coop/wp-content/uploads/2023/10/imgTop.png'); /* Reemplaza con el nombre de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección de flex a columna */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Evitar el desplazamiento vertical por defecto */
+}
+
+.calculator {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 550px;
+    text-align: center;
+    overflow-y: auto; /* Permitir el desplazamiento dentro del contenedor de la calculadora */
+}
+
+h1 {
+    color: #3498db; /* Azul brillante - puedes cambiar el color según tu preferencia */
+    font-size: 2em;
+}
+
+label, input, select, button {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db; /* Azul brillante - puedes cambiar el color según tu preferencia */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9; /* Azul más oscuro en el hover - puedes cambiar según tu preferencia */
+}
+
+#monthlyPaymentContainer {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+#amortizationContainer {
+    display: none;
+    margin-top: 20px;
+    overflow-y: auto; /* Permitir el desplazamiento dentro del contenedor de amortización */
+}
+
+#disclaimer {
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 10px;
+}
+
+#loanTermValue {
+    font-size: 1.5em;
+    color: #2980b9;
+    margin: 20px 0;
+}
+
+#amortizationTable th {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Ajustar el ancho de las columnas */
+#amortizationTable th:nth-child(1),
+#amortizationTable td:nth-child(1),
+#amortizationTable th:nth-child(5),
+#amortizationTable td:nth-child(5) {
+    width: 10%; /* Puedes ajustar el porcentaje según tus preferencias */
+}
