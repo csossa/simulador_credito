@@ -88,3 +88,12 @@ button:hover {
 #amortizationTable td:nth-child(5) {
     width: 10%; /* Puedes ajustar el porcentaje según tus preferencias */
 }
+
+/* Cambios para pantallas más pequeñas */
+@media only screen and (max-width: 600px) {
+    .calculator {
+        width: 100%; /* Otra opción es reducir el ancho */
+    }
+
+    /* Otros ajustes según sea necesario */
+}
