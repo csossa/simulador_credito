@@ -14,6 +14,13 @@
     <div class="calculator">
         <h1>¡Crédito Aniversario!</h1>
         
+        <label for="borrowerName">Nombre del Solicitante:</label>
+        <input type="text" id="borrowerName" placeholder="Ingrese el nombre del solicitante">
+
+        <!-- Edad -->
+        <label for="age">Edad:</label>
+        <input type="number" id="age" placeholder="Ingrese su edad">
+
         <!-- Paso 1: Límite de monto y tasa de interés -->
         <label for="loanAmount">Monto del préstamo:</label>
         <input type="number" id="loanAmount" placeholder="Ingrese el monto del préstamo">
@@ -32,11 +39,7 @@
             <p id="monthlyPaymentValue">$0.00</p>
         </div>
 
-        <!-- Paso 7: Nota informativa -->
-        <div id="disclaimer">
-            <p>La cuota no incluye el valor del seguro.</p>
-        </div>
-       
+
         <!-- Paso 9: Mostrar y ocultar tabla de amortización -->
         <button onclick="toggleAmortizationTable()">Mostrar/Ocultar Tabla de Amortización</button>
 
